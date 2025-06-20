@@ -44,47 +44,22 @@ The goal is to deliver an end-to-end, reproducible pipeline—from raw data down
 
 
 
-## 📁 Repository structure
-
-
-.
-├── data/
-│   ├── raw/              # Original data (git-ignored)
-│   └── processed/        # Cleaned parquet/feather
-├── notebooks/
-│   └── 01\_EDA\_TFT.ipynb  # Exploratory analysis & first experiment
-├── src/
-│   ├── data/             # Download & cleaning scripts
-│   ├── features/         # Feature engineering
-│   ├── models/           # Training & evaluation
-│   └── visualization/    # Plots & dashboards
-├── tests/                # Unit tests (pytest)
-├── requirements.txt
-├── Dockerfile
-└── README.md
-
-
-
 
 ## 🚀 Quickstart
 
 
-# 1️⃣  Clone
+
 git clone https://github.com/franrolotti/electricity-price-forecast.git
 cd electricity-price-forecast
 
-# 2️⃣  Create virtual env
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# 3️⃣  Download data (placeholder)
 python src/data/make_dataset.py --start 2022-01-01 --end 2024-12-31
 
-# 4️⃣  Train model
 python src/models/train_tft.py --config config/tft.yaml
 
-# 5️⃣  Evaluate
 python src/models/evaluate.py --model_path models/tft_latest.ckpt
 
 
@@ -97,7 +72,6 @@ python src/models/evaluate.py --model_path models/tft_latest.ckpt
 | 24 h    | < 6 % | —    | ≥ 90 %       |
 | 168 h   | < 9 % | —    | ≥ 87 %       |
 
-> Update the table after training; metrics are logged to `reports/metrics.json`.
 
 
 
