@@ -1,6 +1,3 @@
-Below is the full README in plain text. Select everything inside the code block and paste it directly into your `README.md`.
-
-```markdown
 # Electricity-Price-Forecast ⚡️
 
 Hourly electricity-price forecasting for the Iberian power market (OMIE) using a **Temporal Fusion Transformer (TFT)**, the multi-horizon time-series model introduced by Lim et al. (2021).  
@@ -45,11 +42,10 @@ The goal is to deliver an end-to-end, reproducible pipeline—from raw data down
 - Smaller network (`hidden_size = 32`, `attention_head_size = 4`) so training fits in < 30 min on free Colab/Kaggle GPUs.  
 - Minimal categorical embeddings; weather features are optional.
 
----
+
 
 ## 📁 Repository structure
 
-```
 
 .
 ├── data/
@@ -67,13 +63,12 @@ The goal is to deliver an end-to-end, reproducible pipeline—from raw data down
 ├── Dockerfile
 └── README.md
 
-````
 
----
+
 
 ## 🚀 Quickstart
 
-```bash
+
 # 1️⃣  Clone
 git clone https://github.com/franrolotti/electricity-price-forecast.git
 cd electricity-price-forecast
@@ -91,9 +86,9 @@ python src/models/train_tft.py --config config/tft.yaml
 
 # 5️⃣  Evaluate
 python src/models/evaluate.py --model_path models/tft_latest.ckpt
-````
 
----
+
+
 
 ## 📊 Expected results
 
@@ -104,7 +99,7 @@ python src/models/evaluate.py --model_path models/tft_latest.ckpt
 
 > Update the table after training; metrics are logged to `reports/metrics.json`.
 
----
+
 
 ## 🛠️ Requirements
 
@@ -113,7 +108,6 @@ python src/models/evaluate.py --model_path models/tft_latest.ckpt
 * PyTorch-Forecasting ≥ 1.0
 * CUDA-enabled GPU (optional, speeds up training)
 
----
 
 ## ✍️ Contributing
 
